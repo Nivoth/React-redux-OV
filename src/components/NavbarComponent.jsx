@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Navbar } from "flowbite-react";
 import { Link } from "react-router-dom";
-import { FaCartArrowDown } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 export default function NavbarComponent() {
@@ -30,7 +29,7 @@ export default function NavbarComponent() {
       }
     ]);
     //get data from store
-    const total = useSelector((state) => state.cart.total)
+    // const total = useSelector((state) => state.cart.total)
     //
     const handleClick = (list) => {
       setNavbarList((preValue) => {
@@ -77,10 +76,6 @@ export default function NavbarComponent() {
               )
             })}
             <Navbar.Link as={Link} to={'/Cart'} >
-              <div className="relative">
-                <span className="absolute bg-red-600 rounded-full -top-4 -right-5 px-1">{total}</span>
-                <FaCartArrowDown />
-              </div>
             </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>

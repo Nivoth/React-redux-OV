@@ -1,8 +1,6 @@
 import React from 'react'
 import { Card } from "flowbite-react";
 import { useSelector, useDispatch } from 'react-redux';
-import { addToCart } from '../../../redux/features/cart/cartSlice'; 
-
 export default function CardProduct({id,qty,description,title,image,price}) {
 //fetching data from the store using hook Useselctor
 const items = useSelector((state) => state.cart);

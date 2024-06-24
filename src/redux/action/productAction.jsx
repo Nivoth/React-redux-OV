@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import { BASE_URL } from "../api";
-export const getAllproduct = (products) => {
+export const getAllproducts = (products) => {
     return(dispatch) => {
         axios(`${BASE_URL}products`)
         .then((response) => {
